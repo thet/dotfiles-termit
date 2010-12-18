@@ -17,26 +17,27 @@ setOptions(defaults)
 --setColormap(colormap)
 --
 
+bindKey('Ctrl-w', nil)
+bindKey('Alt-w', closeTab)
+
 -- OPEN NEW TAB, SET WORKING DIR TO CALLER's TAB
 function open_new_tab()
     local tabinfo = currentTab()
     openTab(tabinfo)
 end
-bindKey('Ctrl-t', open_new_tab)
+bindKey('Alt-t', open_new_tab)
 
 -- OPEN/SAVE SESSION
-bindKey('Ctrl-o', loadSessionDlg)
-bindKey('Ctrl-s', saveSessionDlg)
+bindKey('Alt-o', loadSessionDlg)
+bindKey('Alt-s', saveSessionDlg)
 
 -- COPY/PASTE
-bindKey('Ctrl-y', copy)
-bindKey('Ctrl-p', paste)
-
-bindKey('Ctrl-f', toggleMenubar)
+bindKey('Alt-y', copy)
+bindKey('Alt-p', paste)
 
 function changeTabFontSize(delta)
     tab = tabs[currentTabIndex()]
     setTabFont(string.sub(tab.font, 1, string.find(tab.font, '%d+$') - 1)..(tab.fontSize + delta))
 end
-bindKey('Ctrl-i', function() changeTabFontSize(1) end)
-bindKey('Ctrl-u', function() changeTabFontSize(-1) end)
+bindKey('Alt-i', function() changeTabFontSize(1) end)
+bindKey('Alt-u', function() changeTabFontSize(-1) end)
