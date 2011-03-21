@@ -1,4 +1,7 @@
 defaults = {}
+defaults.hideMenubar = true
+defaults.hideSingleTab = true
+defaults.showScrollbar = false
 defaults.windowTitle = 'Termit'
 defaults.tabName = ''
 defaults.encoding = 'UTF-8'
@@ -34,6 +37,10 @@ bindKey('Alt-s', saveSessionDlg)
 -- COPY/PASTE
 bindKey('Alt-y', copy)
 bindKey('Alt-p', paste)
+
+-- menubar
+--bindKey('Alt-m', toggleMenubar)
+--bindKey('Alt-p', function() showScrollbar = true end)
 
 function changeTabFontSize(delta)
     tab = tabs[currentTabIndex()]
