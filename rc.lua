@@ -20,7 +20,8 @@ setOptions(defaults)
 --setColormap(colormap)
 --
 
-bindKey('Ctrl-w', nil)
+-- Ctrl-w is disabled by default since..?
+--bindKey('Ctrl-w', nil)
 bindKey('Alt-w', closeTab)
 
 -- OPEN NEW TAB, SET WORKING DIR TO CALLER's TAB
