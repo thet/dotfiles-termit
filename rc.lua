@@ -10,7 +10,7 @@ defaults.font = 'Monospace 10'
 defaults.foregroundColor = 'white'
 defaults.backgroundColor = 'black'
 defaults.scrollbackLines = 4096
-defaults.geometry = '10x10'
+defaults.geometry = '10x1'
 setOptions(defaults)
 
 -- Tango Color Theme
