@@ -22,7 +22,7 @@ setOptions(defaults)
 
 -- Ctrl-w is disabled by default since..?
 bindKey('Ctrl-w', nil)
-bindKey('Alt-w', closeTab)
+bindKey('Ctrl-t', nil) -- needed by aptitude, etc.
 
 -- OPEN NEW TAB, SET WORKING DIR TO CALLER's TAB
 function open_new_tab()
@@ -30,6 +30,8 @@ function open_new_tab()
     openTab(tabinfo)
 end
 bindKey('Alt-t', open_new_tab)
+bindKey('Alt-n', openTab) -- open tab with default tabinfo
+bindKey('Alt-w', closeTab)
 
 -- OPEN/SAVE SESSION
 bindKey('Alt-o', loadSessionDlg)
