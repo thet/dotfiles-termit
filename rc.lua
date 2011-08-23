@@ -31,7 +31,7 @@ function open_new_tab()
 end
 bindKey('Alt-t', open_new_tab)
 bindKey('Alt-n', openTab) -- open tab with default tabinfo
-bindKey('Alt-w', closeTab)
+--bindKey('Alt-w', closeTab)
 
 -- OPEN/SAVE SESSION
 bindKey('Alt-o', loadSessionDlg)
@@ -43,7 +43,31 @@ bindKey('Alt-p', paste)
 
 -- menubar
 --bindKey('Alt-m', toggleMenubar)
---bindKey('Alt-p', function() showScrollbar = true end)
+
+function toggleScrollbar()
+    temp_options = {}
+    temp_options.showScrollbar = true
+    setOptions(temp_options)
+end
+bindKey('Alt-h', toggleScrollbar)
+
+
+function flipColors()
+    tab = tabs[currentTabIndex()]
+    setTabForegroundColor(tab.backgroundColor)
+    setTabBackgroundColor(tab.foregroundColor)
+end
+function flipColorsW()
+    setTabForegroundColor('black')
+    setTabBackgroundColor('white')
+end
+function flipColorsB()
+    setTabForegroundColor('white')
+    setTabBackgroundColor('black')
+end
+bindKey('Alt-f', function() flipColors() end)
+bindKey('Alt-w', flipColorsW)
+bindKey('Alt-b', flipColorsB)
 
 function changeTabFontSize(delta)
     tab = tabs[currentTabIndex()]
