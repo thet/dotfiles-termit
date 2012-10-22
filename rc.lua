@@ -6,9 +6,9 @@ defaults.windowTitle = 'Termit'
 defaults.tabName = ''
 defaults.encoding = 'UTF-8'
 defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
-defaults.font = 'Monospace 10'
+defaults.font = 'Ubuntu Mono 12'
 defaults.foregroundColor = 'white'
-defaults.backgroundColor = 'black'
+defaults.backgroundColor = '#300A24'
 defaults.scrollbackLines = 4096
 defaults.geometry = '10x1'
 setOptions(defaults)
