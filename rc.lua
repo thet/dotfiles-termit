@@ -1,6 +1,7 @@
 defaults = {}
 defaults.hideMenubar = true
-defaults.hideSingleTab = true
+defaults.hideTabbar = false
+defaults.hideSingleTab = false
 defaults.showScrollbar = true
 defaults.windowTitle = 'Termit'
 defaults.tabName = ''
@@ -31,6 +32,7 @@ function open_new_tab()
 end
 bindKey('Alt-t', open_new_tab)
 bindKey('Alt-n', openTab) -- open tab with default tabinfo
+bindKey('Alt-r', toggleTabbar)
 --bindKey('Alt-w', closeTab)
 
 -- OPEN/SAVE SESSION
