@@ -1,7 +1,7 @@
 defaults = {}
 defaults.hideMenubar = true
 defaults.hideSingleTab = true
-defaults.showScrollbar = false
+defaults.showScrollbar = true
 defaults.windowTitle = 'Termit'
 defaults.tabName = ''
 defaults.encoding = 'UTF-8'
