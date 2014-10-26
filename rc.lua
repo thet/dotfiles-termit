@@ -1,15 +1,18 @@
 defaults = {}
 defaults.hideMenubar = true
-defaults.hideTabbar = false
-defaults.hideSingleTab = false
 defaults.showScrollbar = true
+
+defaults.hideTabbar = false
+defaults.hideSingleTab = true
+
 defaults.windowTitle = 'Termit'
 defaults.tabName = ''
 defaults.encoding = 'UTF-8'
 defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
-defaults.font = 'Ubuntu Mono 11'
+--defaults.font = 'Source Code Pro 11'
+defaults.font = 'Ubuntu Mono for Powerline 11'
 defaults.foregroundColor = 'white'
-defaults.backgroundColor = '#300A24'
+defaults.backgroundColor = '#333333'
 defaults.scrollbackLines = 4096
 defaults.geometry = '10x1'
 setOptions(defaults)
