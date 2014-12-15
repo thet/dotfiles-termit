@@ -11,8 +11,8 @@ defaults.encoding = 'UTF-8'
 defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
 --defaults.font = 'Source Code Pro 11'
 defaults.font = 'Ubuntu Mono for Powerline 10'
-defaults.foregroundColor = 'black'
-defaults.backgroundColor = 'white'
+defaults.foregroundColor = 'white'
+defaults.backgroundColor = '#333333'
 defaults.scrollbackLines = 20000
 defaults.geometry = '10x1'
 setOptions(defaults)
