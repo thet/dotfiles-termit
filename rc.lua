@@ -1,3 +1,6 @@
+-- color_dark = '#333333'
+color_dark = '#1B1D1E'
+
 defaults = {}
 defaults.hideMenubar = true
 defaults.showScrollbar = true
@@ -12,7 +15,7 @@ defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
 --defaults.font = 'Source Code Pro 11'
 defaults.font = 'Ubuntu Mono for Powerline 10'
 defaults.foregroundColor = 'white'
-defaults.backgroundColor = '#333333'
+defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
 defaults.geometry = '10x1'
 setOptions(defaults)
@@ -68,7 +71,7 @@ function flipColorsW()
 end
 function flipColorsB()
     setTabForegroundColor('white')
-    setTabBackgroundColor('black')
+    setTabBackgroundColor(color_dark)
 end
 bindKey('Alt-f', function() flipColors() end)
 bindKey('Alt-w', flipColorsW)
@@ -91,3 +94,6 @@ bindKey('Alt-7', function() activateTab(7) end)
 bindKey('Alt-8', function() activateTab(8) end)
 bindKey('Alt-9', function() activateTab(9) end)
 bindKey('Alt-0', function() activateTab(10) end)
+
+bindKey('Alt-i', function() changeTabFontSize(1) end)
+
