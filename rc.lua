@@ -95,5 +95,6 @@ bindKey('Alt-8', function() activateTab(8) end)
 bindKey('Alt-9', function() activateTab(9) end)
 bindKey('Alt-0', function() activateTab(10) end)
 
-bindKey('Alt-i', function() changeTabFontSize(1) end)
+-- paste ssh login strings into buffer
+bindKey('Alt-l', function() feedChild('eval $(\'ssh-agent\'); ssh-add') end)
 
