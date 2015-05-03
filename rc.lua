@@ -2,11 +2,13 @@
 color_dark = '#1B1D1E'
 
 defaults = {}
-defaults.hideMenubar = true
-defaults.showScrollbar = true
 
-defaults.hideTabbar = false
+defaults.fillTabbar = false
+defaults.hideMenubar = true
 defaults.hideSingleTab = true
+defaults.hideTabbar = false
+defaults.showBorder = false
+defaults.showScrollbar = false
 
 defaults.transparency = 1.0
 defaults.windowTitle = 'Termit'
