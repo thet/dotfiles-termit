@@ -8,12 +8,14 @@ defaults.showScrollbar = true
 defaults.hideTabbar = false
 defaults.hideSingleTab = true
 
+defaults.transparency = 1.0
 defaults.windowTitle = 'Termit'
 defaults.tabName = ''
 defaults.encoding = 'UTF-8'
 defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
 --defaults.font = 'Source Code Pro 11'
-defaults.font = 'Ubuntu Mono for Powerline 10'
+--defaults.font = 'Ubuntu Mono for Powerline 10'
+defaults.font = 'Ubuntu Mono for Powerline 14'
 defaults.foregroundColor = 'white'
 defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
