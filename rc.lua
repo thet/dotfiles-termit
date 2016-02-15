@@ -10,14 +10,14 @@ defaults.hideTabbar = false
 defaults.showBorder = false
 defaults.showScrollbar = false
 
+-- defaults.transparency = 0.0
 defaults.transparency = 1.0
 defaults.windowTitle = 'Termit'
 defaults.tabName = ''
 defaults.encoding = 'UTF-8'
 defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
 --defaults.font = 'Source Code Pro 11'
---defaults.font = 'Ubuntu Mono for Powerline 10'
-defaults.font = 'Ubuntu Mono for Powerline 14'
+defaults.font = 'Ubuntu Mono for Powerline 12'
 defaults.foregroundColor = 'white'
 defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
@@ -83,7 +83,8 @@ bindKey('Alt-b', flipColorsB)
 
 function changeTabFontSize(delta)
     tab = tabs[currentTabIndex()]
-    setTabFont(string.sub(tab.font, 1, string.find(tab.font, '%d+$') - 1)..(tab.fontSize + delta))
+    -- setTabFont(string.sub(tab.font, 1, string.find(tab.font, '%d+$') - 1) .. (tab.fontSize + delta))
+    setTabFont("Ubuntu Mono for Powerline " .. (tab.fontSize + delta))
 end
 bindKey('Alt-i', function() changeTabFontSize(1) end)
 bindKey('Alt-u', function() changeTabFontSize(-1) end)
