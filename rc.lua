@@ -8,7 +8,7 @@ defaults.hideMenubar = true
 defaults.hideSingleTab = true
 defaults.hideTabbar = false
 defaults.showBorder = false
-defaults.showScrollbar = false
+defaults.showScrollbar = true
 
 -- defaults.transparency = 0.0
 defaults.transparency = 1.0
@@ -21,7 +21,7 @@ defaults.font = 'Ubuntu Mono for Powerline 12'
 defaults.foregroundColor = 'white'
 defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
-defaults.geometry = '10x1'
+defaults.geometry = '10x2'
 setOptions(defaults)
 
 -- Tango Color Theme
