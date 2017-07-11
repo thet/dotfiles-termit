@@ -17,7 +17,8 @@ defaults.tabName = ''
 defaults.encoding = 'UTF-8'
 defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
 --defaults.font = 'Source Code Pro 11'
-defaults.font = 'Ubuntu Mono for Powerline 12'
+--defaults.font = 'Ubuntu Mono for Powerline 12'
+defaults.font = 'UbuntuMono Nerd Font Regular 12'
 defaults.foregroundColor = 'white'
 defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
@@ -33,7 +34,7 @@ setOptions(defaults)
 
 -- Ctrl-w is disabled by default since..?
 bindKey('Ctrl-w', nil)
-bindKey('Ctrl-t', nil) -- needed by aptitude, etc.
+-- bindKey('Ctrl-t', nil) -- needed by aptitude, etc.
 
 -- OPEN NEW TAB, SET WORKING DIR TO CALLER's TAB
 function open_new_tab()
@@ -103,3 +104,9 @@ bindKey('Alt-0', function() activateTab(10) end)
 -- paste ssh login strings into buffer
 bindKey('Alt-l', function() feedChild('eval $(\'ssh-agent\'); ssh-add') end)
 
+-- Gnome compatibility
+bindKey('Ctrl-Page_Up', nextTab)
+bindKey('Ctrl-Page_Down', prevTab)
+bindKey('Ctrl-t', open_new_tab)
+bindKey('CtrlShift-c', copy)
+bindKey('CtrlShift-v', paste)
