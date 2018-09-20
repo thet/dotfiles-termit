@@ -1,5 +1,9 @@
 -- color_dark = '#333333'
-color_dark = '#1B1D1E'
+-- color_dark = '#1B1D1E'
+color_dark = '#000000'
+-- color_bright = 'white'
+color_bright = '#FFFFFF'
+
 
 defaults = {}
 
@@ -19,7 +23,7 @@ defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
 --defaults.font = 'Source Code Pro 11'
 --defaults.font = 'Ubuntu Mono for Powerline 12'
 defaults.font = 'UbuntuMono Nerd Font Regular 12'
-defaults.foregroundColor = 'white'
+defaults.foregroundColor = color_bright
 defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
 defaults.geometry = '10x2'
@@ -71,11 +75,11 @@ function flipColors()
     setTabBackgroundColor(tab.foregroundColor)
 end
 function flipColorsW()
-    setTabForegroundColor('black')
-    setTabBackgroundColor('white')
+    setTabForegroundColor(color_dark)
+    setTabBackgroundColor(color_bright)
 end
 function flipColorsB()
-    setTabForegroundColor('white')
+    setTabForegroundColor(color_bright)
     setTabBackgroundColor(color_dark)
 end
 bindKey('Alt-f', function() flipColors() end)
