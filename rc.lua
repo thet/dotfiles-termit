@@ -46,7 +46,7 @@ function open_new_tab()
     openTab(tabinfo)
 end
 bindKey('Alt-t', open_new_tab)
-bindKey('Alt-n', openTab) -- open tab with default tabinfo
+-- bindKey('Alt-n', openTab) -- open tab with default tabinfo
 bindKey('Alt-r', toggleTabbar)
 --bindKey('Alt-w', closeTab)
 
@@ -106,7 +106,8 @@ bindKey('Alt-9', function() activateTab(9) end)
 bindKey('Alt-0', function() activateTab(10) end)
 
 -- paste ssh login strings into buffer
-bindKey('Alt-l', function() feedChild('eval $(\'ssh-agent\'); ssh-add') end)
+bindKey('Alt-l', function() feedChild('eval $(\'ssh-agent\'); ssh-add\n\r') end)
+bindKey('Alt-n', function() feedChild('termit . &\n\r') end)
 
 -- Gnome compatibility
 bindKey('Ctrl-Page_Up', nextTab)
