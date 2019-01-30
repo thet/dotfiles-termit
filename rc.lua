@@ -108,6 +108,7 @@ bindKey('Alt-0', function() activateTab(10) end)
 -- paste ssh login strings into buffer
 bindKey('Alt-l', function() feedChild('eval $(\'ssh-agent\'); ssh-add\n\r') end)
 bindKey('Alt-n', function() feedChild('termit . &\n\r') end)
+bindKey('Alt-m', function() feedChild('gnome-terminal . &\n\r') end)
 
 -- Gnome compatibility
 bindKey('Ctrl-Page_Up', nextTab)
