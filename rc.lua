@@ -4,6 +4,16 @@ color_dark = '#000000'
 -- color_bright = 'white'
 color_bright = '#FFFFFF'
 
+color_fg_c = 'white'
+color_bg_c = 'green'
+color_fg_v = 'black'
+color_bg_v = 'yellow'
+color_fg_x = 'white'
+color_bg_x = 'red'
+color_fg_z = 'white'
+color_bg_z = 'blue'
+color_fg_a = 'red'
+color_bg_a = 'blue'
 
 defaults = {}
 
@@ -26,7 +36,7 @@ defaults.font = 'UbuntuMono Nerd Font Regular 12'
 defaults.foregroundColor = color_bright
 defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
-defaults.geometry = '10x2'
+defaults.geometry = '80x25'
 setOptions(defaults)
 
 -- Tango Color Theme
@@ -82,9 +92,38 @@ function flipColorsB()
     setTabForegroundColor(color_bright)
     setTabBackgroundColor(color_dark)
 end
+function flipColorsV()
+    setTabForegroundColor(color_fg_v)
+    setTabBackgroundColor(color_bg_v)
+end
+function flipColorsC()
+    setTabForegroundColor(color_fg_c)
+    setTabBackgroundColor(color_bg_c)
+end
+function flipColorsX()
+    setTabForegroundColor(color_fg_x)
+    setTabBackgroundColor(color_bg_x)
+end
+function flipColorsZ()
+    setTabForegroundColor(color_fg_z)
+    setTabBackgroundColor(color_bg_z)
+end
+function flipColorsA()
+    setTabForegroundColor(color_fg_a)
+    setTabBackgroundColor(color_bg_a)
+end
+
+
+
 bindKey('Alt-f', function() flipColors() end)
+
 bindKey('Alt-w', flipColorsW)
 bindKey('Alt-b', flipColorsB)
+bindKey('Alt-v', flipColorsV)
+bindKey('Alt-c', flipColorsC)
+bindKey('Alt-x', flipColorsX)
+bindKey('Alt-z', flipColorsZ)
+bindKey('Alt-a', flipColorsA)
 
 function changeTabFontSize(delta)
     tab = tabs[currentTabIndex()]
