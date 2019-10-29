@@ -46,6 +46,10 @@ setOptions(defaults)
 --setColormap(colormap)
 --
 
+
+-- Prevent opening multiple tabs on click to window header bar
+bindMouse('DoubleClick', nil)
+
 -- Ctrl-w is disabled by default since..?
 bindKey('Ctrl-w', nil)
 -- bindKey('Ctrl-t', nil) -- needed by aptitude, etc.
