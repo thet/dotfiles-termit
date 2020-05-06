@@ -132,7 +132,7 @@ bindKey('Alt-a', flipColorsA)
 function changeTabFontSize(delta)
     tab = tabs[currentTabIndex()]
     -- setTabFont(string.sub(tab.font, 1, string.find(tab.font, '%d+$') - 1) .. (tab.fontSize + delta))
-    setTabFont("Ubuntu Mono for Powerline " .. (tab.fontSize + delta))
+    setTabFont("Ubuntu Mono for Powerline " .. math.floor(tab.fontSize + delta))
 end
 bindKey('Alt-i', function() changeTabFontSize(1) end)
 bindKey('Alt-u', function() changeTabFontSize(-1) end)
