@@ -36,6 +36,7 @@ defaults.font = 'UbuntuMono Nerd Font Regular 12'
 defaults.foregroundColor = color_bright
 defaults.backgroundColor = color_dark
 defaults.scrollbackLines = 20000
+--defaults.geometry = '120x50'
 defaults.geometry = '80x25'
 setOptions(defaults)
 
