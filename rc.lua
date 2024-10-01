@@ -66,7 +66,7 @@ bindKey('Alt-t', open_new_tab)
 bindKey('Alt-r', toggleTabbar)
 
 -- prevent accidentially closing a tab!
-bindKey('CtrlShift-w', currentTab);  -- do nothing but a dummycommand
+bindKey('CtrlShift-w', nil);  -- do nothing but a dummycommand
 
 
 -- OPEN/SAVE SESSION
