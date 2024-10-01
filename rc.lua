@@ -64,7 +64,10 @@ end
 bindKey('Alt-t', open_new_tab)
 -- bindKey('Alt-n', openTab) -- open tab with default tabinfo
 bindKey('Alt-r', toggleTabbar)
---bindKey('Alt-w', closeTab)
+
+-- prevent accidentially closing a tab!
+bindKey('CtrlShift-w', currentTab);  -- do nothing but a dummycommand
+
 
 -- OPEN/SAVE SESSION
 bindKey('Alt-o', loadSessionDlg)
