@@ -30,10 +30,16 @@ defaults.windowTitle = 'Termit'
 defaults.tabName = ''
 defaults.encoding = 'UTF-8'
 defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
+
 --defaults.font = 'Source Code Pro 11'
 --defaults.font = 'Ubuntu Mono for Powerline 12'
 --defaults.font = 'UbuntuMono Nerd Font Regular 14'
-defaults.font = 'Ubuntu Mono 14'
+--defaults.font = 'Ubuntu Mono 14'
+--defaults.font = 'Victor Mono 14'
+--defaults.font = 'Ubuntu Mono Ligaturized 14'
+base_font = "Fira Code"
+defaults.font = base_font .. " 14"
+
 defaults.foregroundColor = color_dark
 defaults.backgroundColor = color_bright
 defaults.scrollbackLines = 20000
@@ -137,7 +143,8 @@ bindKey('Alt-a', flipColorsA)
 function changeTabFontSize(delta)
     tab = tabs[currentTabIndex()]
     -- setTabFont(string.sub(tab.font, 1, string.find(tab.font, '%d+$') - 1) .. (tab.fontSize + delta))
-    setTabFont("Ubuntu Mono " .. math.floor(tab.fontSize + delta))
+    -- setTabFont("Ubuntu Mono " .. math.floor(tab.fontSize + delta))
+    setTabFont(base_font .. " " .. math.floor(tab.fontSize + delta))
 end
 bindKey('Alt-i', function() changeTabFontSize(1) end)
 bindKey('Alt-u', function() changeTabFontSize(-1) end)
