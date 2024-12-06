@@ -37,7 +37,9 @@ defaults.wordChars = '+-AA-Za-z0-9,./?%&#:_~'
 --defaults.font = 'Ubuntu Mono 14'
 --defaults.font = 'Victor Mono 14'
 --defaults.font = 'Ubuntu Mono Ligaturized 14'
-base_font = "Fira Code"
+--base_font = "UbuntuSansMono Nerd Font"
+--base_font = "Fira Code"
+base_font = "Fira Code Nerd Font"
 defaults.font = base_font .. " 14"
 
 defaults.foregroundColor = color_dark
