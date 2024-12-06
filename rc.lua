@@ -167,6 +167,9 @@ bindKey('Alt-l', function() feedChild('eval $(\'ssh-agent\'); ssh-add\n\r') end)
 bindKey('Alt-n', function() feedChild('termit . &\n\r') end)
 bindKey('Alt-m', function() feedChild('gnome-terminal . &\n\r') end)
 
+bindKey('CtrlShift-Page_Up', function () setTabPos(currentTabIndex() - 1) end)
+bindKey('CtrlShift-Page_Down', function () setTabPos(currentTabIndex() + 1) end)
+
 -- Gnome compatibility
 bindKey('Ctrl-Page_Up', nextTab)
 bindKey('Ctrl-Page_Down', prevTab)
